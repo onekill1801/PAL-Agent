@@ -91,14 +91,21 @@ class StubProvider(LLMProvider):
 
 
 def _default_for_schema(schema: dict) -> dict:
-    """Build a minimal object satisfying an object schema's required fields."""
+    """Build a minimal object satisfying an object schema's required fields,
+    honouring ``const``/``enum``/``minimum`` so constrained schemas still validate."""
     out = {}
     props = schema.get("properties", {})
     for key in schema.get("required", list(props)):
         spec = props.get(key, {})
-        t = spec.get("type", "string")
-        out[key] = {"string": "", "number": 0, "integer": 0,
-                    "boolean": False, "array": [], "object": {}}.get(t, None)
+        if "const" in spec:
+            out[key] = spec["const"]
+        elif spec.get("enum"):
+            out[key] = spec["enum"][0]
+        elif spec.get("type") in ("number", "integer"):
+            out[key] = spec.get("minimum", 0)
+        else:
+            out[key] = {"string": "", "boolean": False,
+                        "array": [], "object": {}}.get(spec.get("type", "string"), None)
     return out
 
 

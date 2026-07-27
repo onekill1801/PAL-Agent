@@ -60,8 +60,11 @@ def generate(note, level: int | None = None, provider: LLMProvider | None = None
         return {"error": True, "message": f"level must be 1..4, got {level}"}
     provider = provider or get_provider()
     challenge = provider.structured(build_prompt(note, level), CHALLENGE_SCHEMA, system=_SYSTEM)
-    challenge.setdefault("level", level)
-    challenge.setdefault("kind", LEVELS[level][0])
+    # Coerce empty/placeholder fields (e.g. from the stub provider) to real values.
+    if not challenge.get("level"):
+        challenge["level"] = level
+    if not challenge.get("kind"):
+        challenge["kind"] = LEVELS[level][0]
     return {"note": note.name, "level": level, "provider": provider.name, "challenge": challenge}
 
 

@@ -20,6 +20,7 @@ from .memory.graph import KnowledgeGraph
 from .memory.vault import load_vault
 from .mentor.scenarios import scenario_for_vault
 from .mentor.socratic import probe
+from . import orchestrator
 from .verify.codegraph import analyze
 from .verify.sandbox import run_code
 
@@ -149,6 +150,20 @@ def _cmd_feedback(args) -> int:
     return 0
 
 
+def _cmd_mentor(args) -> int:
+    """Run one Socratic adaptive learning cycle (orchestrator)."""
+    code = ""
+    if args.code:
+        with open(args.code, encoding="utf-8") as f:
+            code = f.read()
+    passed = True if args.passed else (False if args.fail else None)
+    out = orchestrator.run_cycle(args.vault, args.note, answer=args.answer, code=code,
+                                 language=args.language, passed=passed,
+                                 use_docker=args.docker, provider=_provider(args))
+    print(json.dumps(out, indent=2, ensure_ascii=False))
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="pal-agent",
                                 description="Adaptive AI Senior Learning Mentor")
@@ -209,6 +224,18 @@ def main(argv=None) -> int:
     fb.add_argument("--answer", required=True)
     fb.add_argument("--llm", default="")
     fb.set_defaults(func=_cmd_feedback)
+
+    mt = sub.add_parser("mentor", help="run one adaptive learning cycle (orchestrator)")
+    mt.add_argument("vault")
+    mt.add_argument("note")
+    mt.add_argument("--code", default="", help="code file to verify (Levels 2-4)")
+    mt.add_argument("--language", default="python")
+    mt.add_argument("--answer", default="", help="concept answer text (Level 1)")
+    mt.add_argument("--passed", action="store_true", help="mark concept answer correct")
+    mt.add_argument("--fail", action="store_true", help="mark concept answer wrong")
+    mt.add_argument("--docker", action="store_true", help="use Docker sandbox for --code")
+    mt.add_argument("--llm", default="")
+    mt.set_defaults(func=_cmd_mentor)
 
     args = p.parse_args(argv)
     if not getattr(args, "func", None):
