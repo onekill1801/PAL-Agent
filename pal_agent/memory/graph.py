@@ -11,6 +11,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+try:  # NetworkX backs the path/cycle queries (N1); dict adjacency is the fallback.
+    import networkx as nx
+except ImportError:  # pragma: no cover - fallback path
+    nx = None
+
 from .vault import Note
 
 
@@ -63,3 +68,56 @@ class KnowledgeGraph:
             "dangling": self.dangling(),
             "orphans": self.orphans(),
         }
+
+    # --- NetworkX-backed queries (N1: sub-10ms path lookups on a RAM graph) -------
+    def to_networkx(self):
+        """Return a cached ``networkx.DiGraph`` of the adjacency (N1: RAM-resident,
+        built once so repeat path queries are sub-millisecond). Requires networkx."""
+        if nx is None:  # pragma: no cover - fallback path
+            raise RuntimeError("networkx not installed; `pip install networkx`")
+        cached = getattr(self, "_nx_cache", None)
+        if cached is not None:
+            return cached
+        g = nx.DiGraph()
+        g.add_nodes_from(self.adjacency)
+        for src, dsts in self.adjacency.items():
+            for dst in dsts:
+                g.add_edge(src, dst)
+        self._nx_cache = g
+        return g
+
+    def shortest_path(self, source: str, target: str) -> list[str] | None:
+        """Learning path source -> target following prerequisite/link edges.
+
+        Falls back to a stdlib BFS if networkx is unavailable. Returns None if no
+        path exists (or either node is unknown)."""
+        if source not in self.adjacency or target not in self.adjacency:
+            return None
+        if nx is not None:
+            try:
+                return nx.shortest_path(self.to_networkx(), source, target)
+            except nx.NetworkXNoPath:
+                return None
+        # stdlib BFS fallback
+        from collections import deque
+        prev, seen, q = {source: None}, {source}, deque([source])
+        while q:
+            cur = q.popleft()
+            if cur == target:
+                path = []
+                while cur is not None:
+                    path.append(cur)
+                    cur = prev[cur]
+                return list(reversed(path))
+            for nxt in self.adjacency.get(cur, []):
+                if nxt not in seen:
+                    seen.add(nxt)
+                    prev[nxt] = cur
+                    q.append(nxt)
+        return None
+
+    def cycles(self) -> list[list[str]]:
+        """Dependency cycles in the knowledge graph (empty = acyclic)."""
+        if nx is None:  # pragma: no cover - fallback path
+            return []
+        return [list(c) for c in nx.simple_cycles(self.to_networkx())]

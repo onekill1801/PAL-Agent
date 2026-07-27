@@ -49,6 +49,20 @@ class KnowledgeGraphTest(unittest.TestCase):
         self.assertEqual(s["edges"], 3)
         self.assertEqual(s["orphans"], ["Orphan_Note"])
 
+    def test_shortest_path(self):
+        self.assertEqual(
+            self.g.shortest_path("State_Concurrency", "Pointers_And_Memory"),
+            ["State_Concurrency", "Pointers_And_Memory"])
+
+    def test_shortest_path_none_when_unreachable(self):
+        self.assertIsNone(self.g.shortest_path("Orphan_Note", "Golang_Basics"))
+        self.assertIsNone(self.g.shortest_path("State_Concurrency", "Nope"))
+
+    def test_cycles_detected(self):
+        # State_Concurrency <-> Golang_Basics is a 2-cycle
+        cycles = self.g.cycles()
+        self.assertTrue(any(set(c) == {"State_Concurrency", "Golang_Basics"} for c in cycles))
+
 
 if __name__ == "__main__":
     unittest.main()

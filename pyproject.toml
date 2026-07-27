@@ -3,7 +3,11 @@ name = "pal-agent"
 version = "0.1.0"
 description = "Adaptive AI Senior Learning Mentor — Obsidian Vault knowledge graph (Phase 1)"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "pyyaml>=5.4",
+    "networkx>=3.0",
+    "jsonschema>=4.0",
+]
 
 [project.scripts]
 pal-agent = "pal_agent.cli:main"

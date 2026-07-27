@@ -13,6 +13,11 @@ import os
 import re
 from dataclasses import dataclass, field
 
+try:  # PyYAML gives robust frontmatter; the minimal parser below is the fallback.
+    import yaml
+except ImportError:  # pragma: no cover - fallback path
+    yaml = None
+
 _WIKILINK = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
 _SCALAR = re.compile(r"^([A-Za-z_][\w-]*):\s*(.*)$")
 _LIST_ITEM = re.compile(r"^\s*-\s*(.*\S)\s*$")
@@ -40,7 +45,12 @@ def _strip_wikilink(item: str) -> str:
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
-    """Split leading ``---`` frontmatter from the body. Returns (meta, body)."""
+    """Split leading ``---`` frontmatter from the body. Returns (meta, body).
+
+    Uses PyYAML when available (handles the full YAML the SRD schema needs); falls
+    back to a minimal stdlib parser otherwise. Either way the result is a plain dict
+    and never raises on malformed input.
+    """
     lines = text.splitlines()
     if not lines or lines[0].strip() != "---":
         return {}, text
@@ -51,6 +61,17 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
             break
     if end is None:
         return {}, text
+
+    block = "\n".join(lines[1:end])
+    body = "\n".join(lines[end + 1:])
+
+    if yaml is not None:
+        try:
+            loaded = yaml.safe_load(block)
+            if isinstance(loaded, dict):
+                return loaded, body
+        except yaml.YAMLError:
+            pass  # fall through to the minimal parser
 
     meta: dict = {}
     current_list_key = None
@@ -118,7 +139,8 @@ def load_note(path: str) -> Note:
     raw_prereqs = meta.get("prerequisites", [])
     if not isinstance(raw_prereqs, list):  # defensive: malformed frontmatter
         raw_prereqs = []
-    prereqs = [str(p) for p in raw_prereqs if p]
+    # Strip [[..]] whether it came from PyYAML (kept verbatim) or the minimal parser.
+    prereqs = [_strip_wikilink(str(p)) for p in raw_prereqs if p]
     return Note(name=os.path.splitext(os.path.basename(path))[0], path=os.path.abspath(path),
                 meta=meta, body=body, links=extract_wikilinks(body), prerequisites=prereqs)
 

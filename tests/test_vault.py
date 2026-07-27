@@ -29,9 +29,11 @@ class ParseFrontmatterTest(unittest.TestCase):
         self.assertEqual(meta["mastery_score"], 68.5)
         self.assertIsInstance(meta["mastery_score"], float)
 
-    def test_lists_strip_wikilinks(self):
+    def test_lists_parsed_raw(self):
+        # parse_frontmatter returns raw YAML values; wikilink stripping for
+        # prerequisites happens in load_note (see LoadVaultTest).
         meta, _ = vault.parse_frontmatter(NOTE)
-        self.assertEqual(meta["prerequisites"], ["Golang_Basics", "Pointers_And_Memory"])
+        self.assertEqual(meta["prerequisites"], ["[[Golang_Basics]]", "[[Pointers_And_Memory]]"])
         self.assertEqual(meta["strengths"], ["Goroutine stack allocation"])
 
     def test_body_is_separated(self):
