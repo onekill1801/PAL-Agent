@@ -11,6 +11,8 @@ import os
 import sys
 
 from . import __version__
+from .knowledge.ingest import ingest_inbox
+from .knowledge.linter import lint_vault
 from .memory import ledger, state
 from .memory.graph import KnowledgeGraph
 from .memory.vault import load_vault
@@ -78,6 +80,24 @@ def _cmd_record(args) -> int:
     return 0
 
 
+def _cmd_ingest(args) -> int:
+    """F2.1: atomize raw docs from an inbox into the vault, auto-linked."""
+    try:
+        created = ingest_inbox(args.inbox, args.vault)
+    except FileNotFoundError as e:
+        print(json.dumps({"error": True, "message": str(e)}), file=sys.stderr)
+        return 1
+    print(json.dumps({"ok": True, "count": len(created), "created": created}, ensure_ascii=False))
+    return 0
+
+
+def _cmd_lint(args) -> int:
+    """F2.3: report orphan notes and suggested links."""
+    vault = args.vault or _DEFAULT_VAULT
+    print(json.dumps(lint_vault(vault), indent=2, ensure_ascii=False))
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="pal-agent",
                                 description="Adaptive AI Senior Learning Mentor")
@@ -99,6 +119,15 @@ def main(argv=None) -> int:
     r.add_argument("--constraints", default="")
     r.add_argument("--weakness-link", default="")
     r.set_defaults(func=_cmd_record)
+
+    ig = sub.add_parser("ingest", help="atomize raw docs from an inbox into the vault (F2.1)")
+    ig.add_argument("inbox", help="inbox dir with raw .md/.txt docs")
+    ig.add_argument("--vault", required=True)
+    ig.set_defaults(func=_cmd_ingest)
+
+    lt = sub.add_parser("lint", help="find orphan notes + suggest links (F2.3)")
+    lt.add_argument("vault", nargs="?", default="")
+    lt.set_defaults(func=_cmd_lint)
 
     args = p.parse_args(argv)
     if not getattr(args, "func", None):
