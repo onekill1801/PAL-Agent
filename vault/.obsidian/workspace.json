@@ -11,14 +11,10 @@
             "id": "16a809aa3c65dbd3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algorithms/BTree_Index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BTree_Index"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithms/BTree_Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for BTree_Index"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithms/BTree_Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from BTree_Index"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithms/BTree_Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of BTree_Index"
+              "title": "Outline"
             }
           }
         ]
@@ -183,44 +176,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "90d1a5210bb387bc",
+  "active": "16a809aa3c65dbd3",
   "lastOpenFiles": [
-    "Knowledge_Map.md.tmp.3968681.13a702bfb2d0",
+    "courses/Course_08_Security.md.tmp.3968681.f3f82676a0eb",
+    "security/Prompt_Injection.md",
+    "security/Prompt_Injection.md.tmp.3968681.2081ccc7fcc0",
+    "security/Defense_In_Depth.md",
+    "security/Defense_In_Depth.md.tmp.3968681.58b5e00fb917",
+    "security/Privilege_Escalation.md",
+    "security/Privilege_Escalation.md.tmp.3968681.f4509b7ac79e",
+    "security/Crypto_Basics.md",
+    "security/Crypto_Basics.md.tmp.3968681.5c8227949fb3",
+    "security/Auth_And_Session.md",
+    "security/Auth_And_Session.md.tmp.3968681.3f257b0a58ab",
+    "security/XSS.md",
+    "security/XSS.md.tmp.3968681.7b8ff52ceb2c",
+    "security/SQL_Injection.md",
+    "security/SQL_Injection.md.tmp.3968681.5734cb8395e5",
+    "security/Buffer_Overflow.md",
+    "security/Buffer_Overflow.md.tmp.3968681.f0657f27a43f",
+    "security/Threat_Modeling.md",
+    "security/Threat_Modeling.md.tmp.3968681.1104724e6445",
+    "security",
+    "algorithms/BTree_Index.md",
     "courses/Course_10_Physical_Sciences.md",
-    "courses/Course_10_Physical_Sciences.md.tmp.3968681.4453f2be1bd7",
     "courses/Course_09_Embedded_IoT_Robotics.md",
-    "courses/Course_09_Embedded_IoT_Robotics.md.tmp.3968681.1333849b5327",
     "courses/Course_08_Security.md",
-    "courses/Course_08_Security.md.tmp.3968681.3e99ed03cdef",
     "algorithms/Dynamic_Programming.md",
-    "Knowledge_Map.md.tmp.3968681.1587f858340a",
     "algorithms/Consistent_Hashing.md",
-    "algorithms/Consistent_Hashing.md.tmp.3968681.53fa203a7370",
     "courses/Course_07_Algorithms.md",
     "LRU_Cache.md",
     "courses/Course_01_LowLevel_Systems.md",
     "algorithms/LRU_Cache.md",
-    "algorithms/LRU_Cache.md.tmp.3968681.bf6f369657c3",
     "algorithms/Sorting_Algorithms.md",
     "algorithms/Gradient_Descent.md",
-    "algorithms/Gradient_Descent.md.tmp.3968681.ed052250d803",
-    "algorithms/Dynamic_Programming.md.tmp.3968681.619146cb1c3c",
     "algorithms/Heap_PriorityQueue.md",
     "algorithms/Hash_Table.md",
     "algorithms/Graph_And_Traversal.md",
     "algorithms/Dijkstra_ShortestPath.md",
-    "algorithms/BTree_Index.md",
-    "algorithms/Binary_Search.md",
-    "algorithms/Dijkstra_ShortestPath.md.tmp.3968681.a2b6b5bfe90f",
-    "algorithms/Big_O_Complexity.md",
-    "db/Lost_Update.md",
-    "algorithms/Graph_And_Traversal.md.tmp.3968681.6389c66d670d",
-    "db/DB_Race_Condition.md",
-    "ai/foundations/Machine_Learning.md",
-    "ai/foundations/Deep_Learning.md",
-    "ai/agents/RAG.md",
-    "ai/agents/Tool_Calling.md",
-    "ai/agents/Prompting.md",
     "Untitled.canvas"
   ]
 }

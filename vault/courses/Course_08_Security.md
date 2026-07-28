@@ -29,6 +29,7 @@ misuse, privilege escalation, LLM/prompt injection, defense-in-depth.
 - AI (C04): `Prompt_Injection`
 - Giải thuật (C07): `Crypto_Basics` (hash, đối xứng/bất đối xứng)
 
-## Atomic notes (sẽ tạo khi verify)
-`Threat_Modeling` · `Buffer_Overflow` · `SQL_Injection` · `XSS` · `Auth_And_Session` ·
-`Crypto_Basics` · `Privilege_Escalation` · `Defense_In_Depth` · `Prompt_Injection`
+## Atomic notes
+[[Threat_Modeling]] · [[Buffer_Overflow]] · [[SQL_Injection]] · [[XSS]] ·
+[[Auth_And_Session]] · [[Crypto_Basics]] · [[Privilege_Escalation]] ·
+[[Defense_In_Depth]] · [[Prompt_Injection]]
