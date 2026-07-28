@@ -15,6 +15,7 @@ nhiều course (xem `courses:` trong frontmatter mỗi note).
 - [[Course_04_Agentic_AI]] — agent, LLM, RAG, multi-node
 - [[Course_05_GPU_Hardware_Tuning]] — GPU, nhiệt, inference 24/7
 - [[Course_06_Enterprise_Modernization]] — legacy uplift, kiến trúc lớn
+- [[Course_07_Algorithms]] — DS&A nền tảng, áp dụng đa domain
 
 ## Cầu nối liên-course (tri thức KHÔNG rời rạc)
 - Bộ nhớ ⇄ Concurrency: [[Shared_Mutable_State]] (C01+C02)
@@ -22,6 +23,9 @@ nhiều course (xem `courses:` trong frontmatter mỗi note).
   [[Mutex_Lock]] ⇄ [[Pessimistic_Locking]]; [[TOCTOU]] → [[Pessimistic_Locking]]
 - AI ⇄ GPU: [[Large_Language_Model]], [[Deep_Learning]], [[Inference_Parameters]] (C04+C05)
 - AI ⇄ Enterprise: [[AI_Agent]] trong IOC (C04+C06)
+- **Giải thuật ⇄ mọi domain (C07):** [[BTree_Index]]/[[Hash_Table]]/[[Consistent_Hashing]]→DB(C03);
+  [[LRU_Cache]]→cache(C01+C03); [[Heap_PriorityQueue]]→scheduler(C02);
+  [[Gradient_Descent]]/[[Dynamic_Programming]]→AI(C04); [[Dijkstra_ShortestPath]]→graph vault
 
 ## Nguyên tắc
 1. Atomic note là gốc — 1 khái niệm, sống 1 chỗ, link tự do.

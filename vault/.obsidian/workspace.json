@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e43be6bbc35a6bb9",
+        "id": "6610e10a40a6eb6e",
         "type": "tabs",
         "children": [
           {
-            "id": "f156cbdea6954460",
+            "id": "16a809aa3c65dbd3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge_Map.md",
+                "file": "algorithms/Dynamic_Programming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Knowledge_Map"
+              "title": "Dynamic_Programming"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Knowledge_Map.md",
+                "file": "algorithms/Dynamic_Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Knowledge_Map"
+              "title": "Backlinks for Dynamic_Programming"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Knowledge_Map.md",
+                "file": "algorithms/Dynamic_Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Knowledge_Map"
+              "title": "Outgoing links from Dynamic_Programming"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Knowledge_Map.md",
+                "file": "algorithms/Dynamic_Programming.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Knowledge_Map"
+              "title": "Outline of Dynamic_Programming"
             }
           }
         ]
@@ -183,44 +183,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "f156cbdea6954460",
+  "active": "90d1a5210bb387bc",
   "lastOpenFiles": [
-    "Activity_Ledger.md",
-    "Knowledge_Map.md",
-    "Knowledge_Map.md.tmp.3968681.2a43d4a751fd",
-    "courses/Course_06_Enterprise_Modernization.md",
-    "courses/Course_06_Enterprise_Modernization.md.tmp.3968681.82a9fcf48627",
-    "courses/Course_05_GPU_Hardware_Tuning.md",
-    "courses/Course_05_GPU_Hardware_Tuning.md.tmp.3968681.32f8c86a9987",
-    "courses/Course_04_Agentic_AI.md",
-    "courses/Course_04_Agentic_AI.md.tmp.3968681.716606b34b9c",
-    "courses/Course_03_Database_Engineering.md",
-    "courses/Course_03_Database_Engineering.md.tmp.3968681.7028836740db",
-    "courses/Course_02_Backend_Concurrency.md",
-    "courses/Course_02_Backend_Concurrency.md.tmp.3968681.4e4a9f942fab",
+    "Knowledge_Map.md.tmp.3968681.1587f858340a",
+    "algorithms/Consistent_Hashing.md",
+    "algorithms/Consistent_Hashing.md.tmp.3968681.53fa203a7370",
+    "courses/Course_07_Algorithms.md",
+    "LRU_Cache.md",
     "courses/Course_01_LowLevel_Systems.md",
-    "courses/Course_01_LowLevel_Systems.md.tmp.3968681.6e312b845b25",
-    "courses",
-    "ai/agents/RAG.md",
-    "ai/foundations/Neural_Network.md",
+    "algorithms/LRU_Cache.md",
+    "algorithms/LRU_Cache.md.tmp.3968681.bf6f369657c3",
+    "algorithms/Sorting_Algorithms.md",
+    "algorithms/Gradient_Descent.md",
+    "algorithms/Gradient_Descent.md.tmp.3968681.ed052250d803",
+    "algorithms/Dynamic_Programming.md",
+    "algorithms/Dynamic_Programming.md.tmp.3968681.619146cb1c3c",
+    "algorithms/Heap_PriorityQueue.md",
+    "algorithms/Hash_Table.md",
+    "algorithms/Graph_And_Traversal.md",
+    "algorithms/Dijkstra_ShortestPath.md",
+    "algorithms/BTree_Index.md",
+    "algorithms/Binary_Search.md",
+    "algorithms/Dijkstra_ShortestPath.md.tmp.3968681.a2b6b5bfe90f",
+    "algorithms/Big_O_Complexity.md",
+    "db/Lost_Update.md",
+    "algorithms/Graph_And_Traversal.md.tmp.3968681.6389c66d670d",
+    "db/DB_Race_Condition.md",
     "ai/foundations/Machine_Learning.md",
     "ai/foundations/Deep_Learning.md",
+    "algorithms/Heap_PriorityQueue.md.tmp.3968681.b77dbfce21e1",
+    "ai/agents/RAG.md",
+    "algorithms/BTree_Index.md.tmp.3968681.58019fa5f8ba",
+    "algorithms/Hash_Table.md.tmp.3968681.d2aa8b1cdce9",
     "ai/agents/Tool_Calling.md",
+    "algorithms/Sorting_Algorithms.md.tmp.3968681.2d0e562266ad",
     "ai/agents/Prompting.md",
     "ai/agents/AI_Agent.md",
-    "ai/foundations/What_Is_AI.md",
-    "ai/agents/AI_Agent.md.tmp.3968681.c357dd019a8d",
-    "ai/agents/Tool_Calling.md.tmp.3968681.75e509f8dd8d",
-    "ai/llm/Inference_Parameters.md",
-    "ai/llm/Transformer_Attention.md",
-    "ai/llm/Token_And_Embedding.md",
-    "ai/llm/Large_Language_Model.md",
-    "ai/foundations/Training_And_Loss.md",
-    "Untitled.canvas",
-    "app/Race_Condition.md",
-    "app/Mutex_Lock.md",
-    "app/Critical_Section.md",
-    "app/TOCTOU.md",
-    "app/Shared_Mutable_State.md"
+    "courses/Course_03_Database_Engineering.md",
+    "app/Shared_Mutable_State.md",
+    "Untitled.canvas"
   ]
 }
