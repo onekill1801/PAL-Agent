@@ -11,10 +11,14 @@
             "id": "f156cbdea6954460",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Activity_Ledger.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Activity_Ledger"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Activity_Ledger.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Activity_Ledger"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Activity_Ledger.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Activity_Ledger"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Activity_Ledger.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Activity_Ledger"
             }
           }
         ]
@@ -178,29 +185,35 @@
   },
   "active": "f156cbdea6954460",
   "lastOpenFiles": [
-    "ai/agents/AI_Agent.md",
-    "ai/agents/AI_Agent.md.tmp.3968681.c357dd019a8d",
-    "ai/agents/Tool_Calling.md",
-    "ai/agents/Tool_Calling.md.tmp.3968681.75e509f8dd8d",
+    "courses/Course_06_Enterprise_Modernization.md",
+    "courses/Course_06_Enterprise_Modernization.md.tmp.3968681.82a9fcf48627",
+    "courses/Course_05_GPU_Hardware_Tuning.md",
+    "courses/Course_05_GPU_Hardware_Tuning.md.tmp.3968681.32f8c86a9987",
+    "courses/Course_04_Agentic_AI.md",
+    "courses/Course_04_Agentic_AI.md.tmp.3968681.716606b34b9c",
+    "courses/Course_03_Database_Engineering.md",
+    "courses/Course_03_Database_Engineering.md.tmp.3968681.7028836740db",
+    "courses/Course_02_Backend_Concurrency.md",
+    "courses/Course_02_Backend_Concurrency.md.tmp.3968681.4e4a9f942fab",
+    "courses/Course_01_LowLevel_Systems.md",
+    "courses/Course_01_LowLevel_Systems.md.tmp.3968681.6e312b845b25",
+    "courses",
     "ai/agents/RAG.md",
-    "ai/agents/RAG.md.tmp.3968681.5778c37dadf2",
-    "ai/agents/Prompting.md",
-    "ai/agents/Prompting.md.tmp.3968681.0c2c801a41b1",
-    "ai/agents",
-    "ai/llm/Inference_Parameters.md",
-    "ai/llm/Inference_Parameters.md.tmp.3968681.cb439c1d2ffe",
-    "ai/llm/Transformer_Attention.md",
-    "ai/llm/Transformer_Attention.md.tmp.3968681.4a30466d8bdd",
-    "ai/llm/Token_And_Embedding.md",
-    "ai/llm/Token_And_Embedding.md.tmp.3968681.1710d515299f",
-    "ai/llm/Large_Language_Model.md",
-    "ai/llm/Large_Language_Model.md.tmp.3968681.796122a93fd4",
-    "ai/llm",
-    "ai/foundations/Deep_Learning.md",
-    "ai/foundations/Training_And_Loss.md",
     "ai/foundations/Neural_Network.md",
     "ai/foundations/Machine_Learning.md",
+    "ai/foundations/Deep_Learning.md",
+    "ai/agents/Tool_Calling.md",
+    "ai/agents/Prompting.md",
+    "ai/agents/AI_Agent.md",
     "ai/foundations/What_Is_AI.md",
+    "ai/agents/AI_Agent.md.tmp.3968681.c357dd019a8d",
+    "ai/agents/Tool_Calling.md.tmp.3968681.75e509f8dd8d",
+    "ai/agents/RAG.md.tmp.3968681.5778c37dadf2",
+    "ai/llm/Inference_Parameters.md",
+    "ai/llm/Transformer_Attention.md",
+    "ai/llm/Token_And_Embedding.md",
+    "ai/llm/Large_Language_Model.md",
+    "ai/foundations/Training_And_Loss.md",
     "Activity_Ledger.md",
     "Untitled.canvas",
     "app/Race_Condition.md",
@@ -208,9 +221,6 @@
     "app/Critical_Section.md",
     "app/TOCTOU.md",
     "app/Shared_Mutable_State.md",
-    "db/Pessimistic_Locking.md",
-    "db/Optimistic_Locking.md",
-    "db/Lost_Update.md",
-    "db/DB_Race_Condition.md"
+    "db/Pessimistic_Locking.md"
   ]
 }
