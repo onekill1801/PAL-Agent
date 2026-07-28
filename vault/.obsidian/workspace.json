@@ -185,6 +185,8 @@
   },
   "active": "16a809aa3c65dbd3",
   "lastOpenFiles": [
+    "app/Deadlock.md",
+    "app/Deadlock.md.tmp.3968681.53ff8dd344f6",
     "courses/Course_10_Physical_Sciences.md.tmp.3968681.cc5349b249b7",
     "courses/Course_09_Embedded_IoT_Robotics.md.tmp.3968681.88707ad5d7f7",
     "science/Quantum_Computing.md",
@@ -201,9 +203,7 @@
     "science/Electromagnetism.md.tmp.3968681.f2e03d9772be",
     "science/Newtonian_Mechanics.md",
     "science/Newtonian_Mechanics.md.tmp.3968681.ea3aa21d46fd",
-    "science",
     "embedded/Drone_FlightController.md",
-    "embedded/Drone_FlightController.md.tmp.3968681.a7ba2c8b0d19",
     "embedded/Power_Battery.md",
     "embedded/IMU_Sensor_Fusion.md",
     "embedded/PID_Control.md",
