@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithms/Dynamic_Programming.md",
+                "file": "algorithms/BTree_Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic_Programming"
+              "title": "BTree_Index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithms/Dynamic_Programming.md",
+                "file": "algorithms/BTree_Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dynamic_Programming"
+              "title": "Backlinks for BTree_Index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithms/Dynamic_Programming.md",
+                "file": "algorithms/BTree_Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Dynamic_Programming"
+              "title": "Outgoing links from BTree_Index"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithms/Dynamic_Programming.md",
+                "file": "algorithms/BTree_Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Dynamic_Programming"
+              "title": "Outline of BTree_Index"
             }
           }
         ]
@@ -185,6 +185,14 @@
   },
   "active": "90d1a5210bb387bc",
   "lastOpenFiles": [
+    "Knowledge_Map.md.tmp.3968681.13a702bfb2d0",
+    "courses/Course_10_Physical_Sciences.md",
+    "courses/Course_10_Physical_Sciences.md.tmp.3968681.4453f2be1bd7",
+    "courses/Course_09_Embedded_IoT_Robotics.md",
+    "courses/Course_09_Embedded_IoT_Robotics.md.tmp.3968681.1333849b5327",
+    "courses/Course_08_Security.md",
+    "courses/Course_08_Security.md.tmp.3968681.3e99ed03cdef",
+    "algorithms/Dynamic_Programming.md",
     "Knowledge_Map.md.tmp.3968681.1587f858340a",
     "algorithms/Consistent_Hashing.md",
     "algorithms/Consistent_Hashing.md.tmp.3968681.53fa203a7370",
@@ -196,7 +204,6 @@
     "algorithms/Sorting_Algorithms.md",
     "algorithms/Gradient_Descent.md",
     "algorithms/Gradient_Descent.md.tmp.3968681.ed052250d803",
-    "algorithms/Dynamic_Programming.md",
     "algorithms/Dynamic_Programming.md.tmp.3968681.619146cb1c3c",
     "algorithms/Heap_PriorityQueue.md",
     "algorithms/Hash_Table.md",
@@ -211,16 +218,9 @@
     "db/DB_Race_Condition.md",
     "ai/foundations/Machine_Learning.md",
     "ai/foundations/Deep_Learning.md",
-    "algorithms/Heap_PriorityQueue.md.tmp.3968681.b77dbfce21e1",
     "ai/agents/RAG.md",
-    "algorithms/BTree_Index.md.tmp.3968681.58019fa5f8ba",
-    "algorithms/Hash_Table.md.tmp.3968681.d2aa8b1cdce9",
     "ai/agents/Tool_Calling.md",
-    "algorithms/Sorting_Algorithms.md.tmp.3968681.2d0e562266ad",
     "ai/agents/Prompting.md",
-    "ai/agents/AI_Agent.md",
-    "courses/Course_03_Database_Engineering.md",
-    "app/Shared_Mutable_State.md",
     "Untitled.canvas"
   ]
 }

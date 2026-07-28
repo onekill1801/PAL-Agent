@@ -16,6 +16,9 @@ nhiều course (xem `courses:` trong frontmatter mỗi note).
 - [[Course_05_GPU_Hardware_Tuning]] — GPU, nhiệt, inference 24/7
 - [[Course_06_Enterprise_Modernization]] — legacy uplift, kiến trúc lớn
 - [[Course_07_Algorithms]] — DS&A nền tảng, áp dụng đa domain
+- [[Course_08_Security]] — lỗ hổng & phòng thủ (định hướng defensive/uỷ quyền)
+- [[Course_09_Embedded_IoT_Robotics]] — thiết bị, điều khiển phần cứng, drone
+- [[Course_10_Physical_Sciences]] — vật lý, hóa, năng lượng, lượng tử
 
 ## Cầu nối liên-course (tri thức KHÔNG rời rạc)
 - Bộ nhớ ⇄ Concurrency: [[Shared_Mutable_State]] (C01+C02)
