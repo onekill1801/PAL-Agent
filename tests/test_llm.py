@@ -65,6 +65,24 @@ class FactoryTest(unittest.TestCase):
     def test_explicit_stub(self):
         self.assertIsInstance(get_provider("stub"), StubProvider)
 
+    def test_selects_ollama_and_openai(self):
+        from pal_agent.llm.provider import OllamaProvider, OpenAICompatibleProvider
+        self.assertIsInstance(get_provider("ollama"), OllamaProvider)
+        self.assertIsInstance(get_provider("openai"), OpenAICompatibleProvider)
+        self.assertIsInstance(get_provider("vllm"), OpenAICompatibleProvider)
+
+    def test_unknown_provider_raises(self):
+        with self.assertRaises(ValueError):
+            get_provider("no-such-model")
+
+    def test_provider_config_from_env(self):
+        from pal_agent.llm.provider import OllamaProvider, OpenAICompatibleProvider
+        o = OllamaProvider(model="mistral", host="http://box:11434")
+        self.assertEqual(o.model, "mistral")
+        self.assertEqual(o.host, "http://box:11434")
+        oa = OpenAICompatibleProvider(model="gpt-4o", base_url="http://localhost:1234/v1/")
+        self.assertEqual(oa.base_url, "http://localhost:1234/v1")  # trailing slash trimmed
+
 
 if __name__ == "__main__":
     unittest.main()

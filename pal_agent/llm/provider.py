@@ -16,6 +16,8 @@ import os
 import re
 import shutil
 import subprocess
+import urllib.error
+import urllib.request
 
 try:
     import jsonschema
@@ -128,13 +130,90 @@ class ClaudeCLIProvider(LLMProvider):
         return proc.stdout.strip()
 
 
+def _http_post_json(url: str, payload: dict, headers: dict, timeout: int) -> dict:
+    """POST JSON and parse a JSON response (stdlib urllib). Raises RuntimeError on failure."""
+    data = json.dumps(payload).encode()
+    req = urllib.request.Request(url, data=data, method="POST",
+                                 headers={"Content-Type": "application/json", **headers})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode() if e.fp else ""
+        raise RuntimeError(f"HTTP {e.code} from {url}: {body[:400]}")
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"cannot reach {url}: {e.reason}")
+
+
+class OllamaProvider(LLMProvider):
+    """Local models via Ollama (http://localhost:11434). No API key, fully offline-capable.
+
+    Env: OLLAMA_HOST (default http://localhost:11434), PAL_MODEL (default 'llama3.1')."""
+
+    name = "ollama"
+
+    def __init__(self, model: str | None = None, host: str | None = None, timeout: int = 180):
+        self.host = (host or os.environ.get("OLLAMA_HOST") or "http://localhost:11434").rstrip("/")
+        self.model = model or os.environ.get("PAL_MODEL") or "llama3.1"
+        self.timeout = timeout
+
+    def complete(self, prompt: str, system: str | None = None) -> str:
+        messages = ([{"role": "system", "content": system}] if system else []) + \
+                   [{"role": "user", "content": prompt}]
+        out = _http_post_json(f"{self.host}/api/chat",
+                              {"model": self.model, "messages": messages, "stream": False},
+                              headers={}, timeout=self.timeout)
+        return (out.get("message") or {}).get("content", "").strip()
+
+
+class OpenAICompatibleProvider(LLMProvider):
+    """Any OpenAI-compatible /chat/completions endpoint: OpenAI, vLLM, LM Studio, LocalAI,
+    Together, Groq, etc. Env: OPENAI_BASE_URL (default https://api.openai.com/v1),
+    OPENAI_API_KEY, PAL_MODEL (default 'gpt-4o-mini')."""
+
+    name = "openai"
+
+    def __init__(self, model: str | None = None, base_url: str | None = None,
+                 api_key: str | None = None, timeout: int = 180):
+        self.base_url = (base_url or os.environ.get("OPENAI_BASE_URL")
+                         or "https://api.openai.com/v1").rstrip("/")
+        self.api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
+        self.model = model or os.environ.get("PAL_MODEL") or "gpt-4o-mini"
+        self.timeout = timeout
+
+    def complete(self, prompt: str, system: str | None = None) -> str:
+        messages = ([{"role": "system", "content": system}] if system else []) + \
+                   [{"role": "user", "content": prompt}]
+        headers = {"Authorization": f"Bearer {self.api_key}"} if self.api_key else {}
+        out = _http_post_json(f"{self.base_url}/chat/completions",
+                              {"model": self.model, "messages": messages, "temperature": 0.3},
+                              headers=headers, timeout=self.timeout)
+        return out["choices"][0]["message"]["content"].strip()
+
+
+# Registry so get_provider stays a simple lookup as providers grow.
+_PROVIDERS = {
+    "stub": StubProvider,
+    "claude": ClaudeCLIProvider,
+    "claude-cli": ClaudeCLIProvider,
+    "ollama": OllamaProvider,
+    "openai": OpenAICompatibleProvider,
+    "openai-compatible": OpenAICompatibleProvider,
+    "vllm": OpenAICompatibleProvider,
+    "lmstudio": OpenAICompatibleProvider,
+}
+
+
 def get_provider(name: str | None = None) -> LLMProvider:
-    """Resolve a provider: explicit ``name`` > $PAL_LLM > auto (claude if present)."""
+    """Resolve a provider: explicit ``name`` > $PAL_LLM > auto (claude if present, else stub).
+
+    The learner's context (vault) is model-independent — switching the provider only
+    changes who generates challenges/narratives, never the stored progress."""
     choice = (name or os.environ.get("PAL_LLM") or "").lower()
-    if choice == "stub":
-        return StubProvider()
-    if choice in ("claude", "claude-cli"):
-        return ClaudeCLIProvider()
+    if choice in _PROVIDERS:
+        return _PROVIDERS[choice]()
+    if choice:
+        raise ValueError(f"unknown provider '{choice}'. Known: {', '.join(sorted(_PROVIDERS))}")
     if shutil.which("claude"):
         return ClaudeCLIProvider()
     return StubProvider()

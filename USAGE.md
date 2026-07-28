@@ -26,7 +26,8 @@ python -m unittest discover -s tests -t .   # 58 tests xanh
 | `read`, `challenge`, `feedback`, `mentor` (nội dung "thật") | `claude` CLI đã đăng nhập | tự chạy **stub** offline (nội dung mẫu) |
 | `verify`, `mentor --docker` (sandbox cô lập) | Docker | dùng `verify --no-docker` (subprocess) |
 
-Chọn backend LLM mỗi lệnh: `--llm claude` · `--llm stub` · bỏ trống = auto (có claude thì dùng claude).
+Chọn backend LLM: `--llm claude|ollama|openai|stub` hoặc biến `PAL_LLM`; bỏ trống = auto
+(claude nếu có, else stub). Đổi máy / đổi model mà **giữ nguyên ngữ cảnh** → xem `PORTABILITY.md`.
 
 ---
 

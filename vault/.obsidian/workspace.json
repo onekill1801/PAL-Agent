@@ -11,10 +11,14 @@
             "id": "16a809aa3c65dbd3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "security/SQL_Injection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL_Injection"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "security/SQL_Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for SQL_Injection"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "security/SQL_Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from SQL_Injection"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "security/SQL_Injection.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of SQL_Injection"
             }
           }
         ]
@@ -178,26 +185,25 @@
   },
   "active": "16a809aa3c65dbd3",
   "lastOpenFiles": [
-    "courses/Course_08_Security.md.tmp.3968681.f3f82676a0eb",
     "security/Prompt_Injection.md",
-    "security/Prompt_Injection.md.tmp.3968681.2081ccc7fcc0",
-    "security/Defense_In_Depth.md",
-    "security/Defense_In_Depth.md.tmp.3968681.58b5e00fb917",
     "security/Privilege_Escalation.md",
-    "security/Privilege_Escalation.md.tmp.3968681.f4509b7ac79e",
+    "security/Defense_In_Depth.md",
     "security/Crypto_Basics.md",
-    "security/Crypto_Basics.md.tmp.3968681.5c8227949fb3",
+    "security/Buffer_Overflow.md",
     "security/Auth_And_Session.md",
+    "courses/Course_08_Security.md.tmp.3968681.f3f82676a0eb",
+    "security/Prompt_Injection.md.tmp.3968681.2081ccc7fcc0",
+    "security/Defense_In_Depth.md.tmp.3968681.58b5e00fb917",
+    "security/Privilege_Escalation.md.tmp.3968681.f4509b7ac79e",
+    "security/Crypto_Basics.md.tmp.3968681.5c8227949fb3",
     "security/Auth_And_Session.md.tmp.3968681.3f257b0a58ab",
     "security/XSS.md",
     "security/XSS.md.tmp.3968681.7b8ff52ceb2c",
     "security/SQL_Injection.md",
     "security/SQL_Injection.md.tmp.3968681.5734cb8395e5",
-    "security/Buffer_Overflow.md",
     "security/Buffer_Overflow.md.tmp.3968681.f0657f27a43f",
     "security/Threat_Modeling.md",
     "security/Threat_Modeling.md.tmp.3968681.1104724e6445",
-    "security",
     "algorithms/BTree_Index.md",
     "courses/Course_10_Physical_Sciences.md",
     "courses/Course_09_Embedded_IoT_Robotics.md",
