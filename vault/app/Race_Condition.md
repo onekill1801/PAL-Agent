@@ -9,6 +9,9 @@ weaknesses:
 - 'Câu 4: chưa nêu tính phi tất định → khó reproduce/flaky test'
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C01
+- C02
 ---
 
 Race condition xảy ra khi **kết quả phụ thuộc vào thứ tự/timing** của nhiều luồng

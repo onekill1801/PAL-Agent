@@ -1,13 +1,16 @@
 ---
-topic: "Pessimistic Locking"
-current_level: "Level 2: Operation"
+topic: Pessimistic Locking
+current_level: 'Level 2: Operation'
 mastery_score: 0.0
 prerequisites:
-  - "[[Lost_Update]]"
-  - "[[Mutex_Lock]]"
+- '[[Lost_Update]]'
+- '[[Mutex_Lock]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C02
+- C03
 ---
 
 Khoá bi quan: **khoá hàng ngay khi đọc** để không ai sửa cho tới khi commit —

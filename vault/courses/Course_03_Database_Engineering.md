@@ -1,13 +1,17 @@
 ---
-topic: "COURSE 03 — Database Engineering & Query Optimization"
-current_level: "Level 3: Anomaly Detection"
+topic: COURSE 03 — Database Engineering & Query Optimization
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[DB_Race_Condition]]"
+- '[[DB_Race_Condition]]'
 weaknesses: []
 strengths: []
-tags: [moc, course]
+tags:
+- moc
+- course
 last_evaluated: 2026-07-28
+courses:
+- C03
 ---
 
 **Vùng tri thức:** PostgreSQL, MySQL, SQL optimization, indexing (B-Tree, Hash, GIN),

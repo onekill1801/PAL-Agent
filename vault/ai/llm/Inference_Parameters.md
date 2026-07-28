@@ -1,12 +1,15 @@
 ---
-topic: "Inference Parameters (temperature, context)"
-current_level: "Level 1: Recognition"
+topic: Inference Parameters (temperature, context)
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Large_Language_Model]]"
+- '[[Large_Language_Model]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
+- C05
 ---
 
 Khi [[Large_Language_Model]] sinh chữ (inference), có vài "núm vặn":

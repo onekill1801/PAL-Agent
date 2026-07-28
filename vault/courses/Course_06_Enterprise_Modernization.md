@@ -1,13 +1,17 @@
 ---
-topic: "COURSE 06 — Enterprise System Design & Legacy Modernization"
-current_level: "Level 3: Anomaly Detection"
+topic: COURSE 06 — Enterprise System Design & Legacy Modernization
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[Race_Condition]]"
+- '[[Race_Condition]]'
 weaknesses: []
 strengths: []
-tags: [moc, course]
+tags:
+- moc
+- course
 last_evaluated: 2026-07-28
+courses:
+- C06
 ---
 
 **Vùng tri thức:** thiết kế hệ thống lớn (IOC — Intelligent Operations Center), nâng cấp

@@ -1,12 +1,15 @@
 ---
-topic: "Deep Learning"
-current_level: "Level 1: Recognition"
+topic: Deep Learning
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Neural_Network]]"
+- '[[Neural_Network]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
+- C05
 ---
 
 Deep Learning = [[Neural_Network]] có **rất nhiều lớp** ("sâu"). Sức mạnh: **tự học đặc

@@ -1,12 +1,14 @@
 ---
-topic: "Tool Calling (Function Calling)"
-current_level: "Level 1: Recognition"
+topic: Tool Calling (Function Calling)
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Prompting]]"
+- '[[Prompting]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Tool calling cho [[Large_Language_Model]] **gọi hàm/API bên ngoài** thay vì chỉ nói. Bạn

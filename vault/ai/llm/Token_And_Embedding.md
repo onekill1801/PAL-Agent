@@ -1,12 +1,14 @@
 ---
-topic: "Token & Embedding"
-current_level: "Level 1: Recognition"
+topic: Token & Embedding
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Large_Language_Model]]"
+- '[[Large_Language_Model]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 **Token** = mẩu văn bản mà [[Large_Language_Model]] xử lý — thường là một từ hoặc mảnh

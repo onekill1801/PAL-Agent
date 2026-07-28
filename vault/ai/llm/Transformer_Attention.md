@@ -1,12 +1,14 @@
 ---
-topic: "Transformer & Attention"
-current_level: "Level 1: Recognition"
+topic: Transformer & Attention
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Token_And_Embedding]]"
+- '[[Token_And_Embedding]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Transformer là kiến trúc [[Neural_Network]] đứng sau mọi [[Large_Language_Model]] hiện

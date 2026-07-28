@@ -1,12 +1,14 @@
 ---
-topic: "Neural Network"
-current_level: "Level 1: Recognition"
+topic: Neural Network
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Machine_Learning]]"
+- '[[Machine_Learning]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Mạng nơ-ron là mô hình [[Machine_Learning]] gồm nhiều **nơ-ron** (đơn vị tính toán)

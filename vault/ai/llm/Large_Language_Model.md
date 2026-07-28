@@ -1,12 +1,15 @@
 ---
-topic: "Large Language Model (LLM)"
-current_level: "Level 1: Recognition"
+topic: Large Language Model (LLM)
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Deep_Learning]]"
+- '[[Deep_Learning]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
+- C05
 ---
 
 LLM (như GPT, Claude) là [[Deep_Learning]] khổng lồ, huấn luyện trên **lượng văn bản

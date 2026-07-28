@@ -1,12 +1,14 @@
 ---
-topic: "Critical Section"
-current_level: "Level 1: Recognition"
+topic: Critical Section
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Shared_Mutable_State]]"
+- '[[Shared_Mutable_State]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C02
 ---
 
 Critical section là **đoạn code truy cập [[Shared_Mutable_State]] cần được thực thi

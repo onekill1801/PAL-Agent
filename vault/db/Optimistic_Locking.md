@@ -1,12 +1,14 @@
 ---
-topic: "Optimistic Locking"
-current_level: "Level 3: Anomaly Detection"
+topic: Optimistic Locking
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[Lost_Update]]"
+- '[[Lost_Update]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C03
 ---
 
 Khoá lạc quan: **không khoá khi đọc**, giả định ít xung đột. Mỗi hàng có cột `version`

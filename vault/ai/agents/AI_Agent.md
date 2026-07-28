@@ -1,13 +1,16 @@
 ---
-topic: "AI Agent"
-current_level: "Level 1: Recognition"
+topic: AI Agent
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Tool_Calling]]"
-  - "[[RAG]]"
+- '[[Tool_Calling]]'
+- '[[RAG]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
+- C06
 ---
 
 AI Agent = [[Large_Language_Model]] chạy trong một **vòng lặp có mục tiêu**:

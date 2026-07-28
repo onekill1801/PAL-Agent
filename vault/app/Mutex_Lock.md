@@ -1,12 +1,14 @@
 ---
-topic: "Mutex / Lock"
-current_level: "Level 2: Operation"
+topic: Mutex / Lock
+current_level: 'Level 2: Operation'
 mastery_score: 0.0
 prerequisites:
-  - "[[Critical_Section]]"
+- '[[Critical_Section]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C02
 ---
 
 Mutex (mutual exclusion lock) đảm bảo chỉ một luồng vào [[Critical_Section]] một lúc:

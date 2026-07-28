@@ -1,12 +1,15 @@
 ---
-topic: "Race Condition trong Database"
-current_level: "Level 1: Recognition"
+topic: Race Condition trong Database
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Race_Condition]]"
+- '[[Race_Condition]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C02
+- C03
 ---
 
 Ở tầng DB, race condition xảy ra giữa các **transaction đồng thời** cùng đọc/ghi một

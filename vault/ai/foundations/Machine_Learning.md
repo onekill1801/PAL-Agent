@@ -1,12 +1,14 @@
 ---
-topic: "Machine Learning"
-current_level: "Level 1: Recognition"
+topic: Machine Learning
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[What_Is_AI]]"
+- '[[What_Is_AI]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Machine Learning (học máy) = **học quy luật TỪ DỮ LIỆU** thay vì con người viết luật.

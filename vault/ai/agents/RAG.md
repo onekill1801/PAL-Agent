@@ -1,13 +1,15 @@
 ---
-topic: "RAG (Retrieval-Augmented Generation)"
-current_level: "Level 1: Recognition"
+topic: RAG (Retrieval-Augmented Generation)
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Prompting]]"
-  - "[[Token_And_Embedding]]"
+- '[[Prompting]]'
+- '[[Token_And_Embedding]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 RAG = **tìm tài liệu liên quan rồi nhét vào prompt** trước khi [[Large_Language_Model]]

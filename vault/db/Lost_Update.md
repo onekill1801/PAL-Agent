@@ -1,12 +1,14 @@
 ---
-topic: "Lost Update"
-current_level: "Level 2: Operation"
+topic: Lost Update
+current_level: 'Level 2: Operation'
 mastery_score: 0.0
 prerequisites:
-  - "[[DB_Race_Condition]]"
+- '[[DB_Race_Condition]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C03
 ---
 
 Lost update: hai transaction cùng **đọc → sửa → ghi** một hàng; transaction ghi sau

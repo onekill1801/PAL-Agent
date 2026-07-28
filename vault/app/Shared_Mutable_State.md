@@ -1,11 +1,14 @@
 ---
-topic: "Shared Mutable State"
-current_level: "Level 1: Recognition"
+topic: Shared Mutable State
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites: []
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C01
+- C02
 ---
 
 Trạng thái **vừa chia sẻ vừa thay đổi được** là gốc rễ của mọi [[Race_Condition]].

@@ -1,12 +1,14 @@
 ---
-topic: "Prompting"
-current_level: "Level 1: Recognition"
+topic: Prompting
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Large_Language_Model]]"
+- '[[Large_Language_Model]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Prompt = **chỉ dẫn bạn đưa cho** [[Large_Language_Model]]. Vì model chỉ đoán token tiếp

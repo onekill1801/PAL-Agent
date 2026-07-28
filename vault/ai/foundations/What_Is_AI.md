@@ -1,11 +1,13 @@
 ---
-topic: "AI là gì"
-current_level: "Level 1: Recognition"
+topic: AI là gì
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites: []
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 AI (trí tuệ nhân tạo) là **máy tính làm những việc thường cần trí thông minh của con

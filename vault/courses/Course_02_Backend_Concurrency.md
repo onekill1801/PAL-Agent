@@ -1,13 +1,17 @@
 ---
-topic: "COURSE 02 — High-Performance Backend & Concurrency"
-current_level: "Level 3: Anomaly Detection"
+topic: COURSE 02 — High-Performance Backend & Concurrency
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[Race_Condition]]"
+- '[[Race_Condition]]'
 weaknesses: []
 strengths: []
-tags: [moc, course]
+tags:
+- moc
+- course
 last_evaluated: 2026-07-28
+courses:
+- C02
 ---
 
 **Vùng tri thức:** Java/Spring Boot (Java 21/25 Virtual Threads), Go concurrency

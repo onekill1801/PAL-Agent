@@ -1,13 +1,17 @@
 ---
-topic: "COURSE 05 — Hardware Tuning, GPU & Performance"
-current_level: "Level 3: Anomaly Detection"
+topic: COURSE 05 — Hardware Tuning, GPU & Performance
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[Deep_Learning]]"
+- '[[Deep_Learning]]'
 weaknesses: []
 strengths: []
-tags: [moc, course]
+tags:
+- moc
+- course
 last_evaluated: 2026-07-28
+courses:
+- C05
 ---
 
 **Vùng tri thức:** GPU optimization (undervolting, cooling), P-States,

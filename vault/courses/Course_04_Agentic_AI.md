@@ -1,13 +1,17 @@
 ---
-topic: "COURSE 04 — Agentic AI & Multi-Node Infrastructure"
-current_level: "Level 3: Anomaly Detection"
+topic: COURSE 04 — Agentic AI & Multi-Node Infrastructure
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[AI_Agent]]"
+- '[[AI_Agent]]'
 weaknesses: []
 strengths: []
-tags: [moc, course]
+tags:
+- moc
+- course
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 **Vùng tri thức:** kiến trúc AI Agent (Dify, OpenClaw, Cursor), Local LLM (Ollama),

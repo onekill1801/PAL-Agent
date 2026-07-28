@@ -1,12 +1,14 @@
 ---
-topic: "Training & Loss"
-current_level: "Level 1: Recognition"
+topic: Training & Loss
+current_level: 'Level 1: Recognition'
 mastery_score: 0.0
 prerequisites:
-  - "[[Neural_Network]]"
+- '[[Neural_Network]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C04
 ---
 
 Training = quá trình **chỉnh trọng số** của [[Neural_Network]] để đầu ra khớp dữ liệu.

@@ -1,12 +1,14 @@
 ---
-topic: "TOCTOU (Time-of-check to Time-of-use)"
-current_level: "Level 3: Anomaly Detection"
+topic: TOCTOU (Time-of-check to Time-of-use)
+current_level: 'Level 3: Anomaly Detection'
 mastery_score: 0.0
 prerequisites:
-  - "[[Race_Condition]]"
+- '[[Race_Condition]]'
 weaknesses: []
 strengths: []
 last_evaluated: 2026-07-28
+courses:
+- C02
 ---
 
 TOCTOU là [[Race_Condition]] nơi có **khoảng trống giữa lúc KIỂM TRA và lúc DÙNG**
