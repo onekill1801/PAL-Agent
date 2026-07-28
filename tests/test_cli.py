@@ -1,9 +1,13 @@
 import io
 import json
+import os
 import unittest
 from contextlib import redirect_stdout
 
 from pal_agent.cli import main
+
+_SAMPLE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       "sample_vault")
 
 
 class CliTest(unittest.TestCase):
@@ -15,7 +19,7 @@ class CliTest(unittest.TestCase):
     def test_hydrate_bundled_sample_vault(self):
         buf = io.StringIO()
         with redirect_stdout(buf):
-            rc = main(["hydrate"])
+            rc = main(["hydrate", _SAMPLE])  # explicit: default now resolves to ./vault
         self.assertEqual(rc, 0)
         out = json.loads(buf.getvalue())
         summary = out["summary"]

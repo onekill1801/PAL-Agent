@@ -24,14 +24,23 @@ from . import orchestrator
 from .verify.codegraph import analyze
 from .verify.sandbox import run_code
 
-# Bundled sample vault (repo-relative), used when no path is given.
-_DEFAULT_VAULT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                              "sample_vault")
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def default_vault() -> str:
+    """Resolve the default vault: ``$PAL_VAULT`` > project ``vault/`` > bundled sample."""
+    env = os.environ.get("PAL_VAULT")
+    if env:
+        return env
+    project_vault = os.path.join(_PROJECT_ROOT, "vault")
+    if os.path.isdir(project_vault):
+        return project_vault
+    return os.path.join(_PROJECT_ROOT, "sample_vault")
 
 
 def _cmd_hydrate(args) -> int:
     """State Hydration (SRD 2.2 step 1): Vault -> graph -> summary."""
-    vault = args.vault or _DEFAULT_VAULT
+    vault = args.vault or default_vault()
     try:
         notes = load_vault(vault)
     except FileNotFoundError as e:
@@ -100,7 +109,7 @@ def _cmd_ingest(args) -> int:
 
 def _cmd_lint(args) -> int:
     """F2.3: report orphan notes and suggested links."""
-    vault = args.vault or _DEFAULT_VAULT
+    vault = args.vault or default_vault()
     print(json.dumps(lint_vault(vault), indent=2, ensure_ascii=False))
     return 0
 
@@ -111,7 +120,7 @@ def _provider(args):
 
 def _cmd_read(args) -> int:
     """F2.2: synthesize a narrative for a topic (read-only)."""
-    vault = args.vault or _DEFAULT_VAULT
+    vault = args.vault or default_vault()
     out = synthesize(vault, args.topic, provider=_provider(args))
     print(json.dumps(out, indent=2, ensure_ascii=False))
     return 1 if out.get("error") else 0
@@ -119,7 +128,7 @@ def _cmd_read(args) -> int:
 
 def _cmd_challenge(args) -> int:
     """F3: generate an adaptive Level 1-4 challenge for a note."""
-    vault = args.vault or _DEFAULT_VAULT
+    vault = args.vault or default_vault()
     out = scenario_for_vault(vault, args.note, level=args.level, provider=_provider(args))
     print(json.dumps(out, indent=2, ensure_ascii=False))
     return 1 if out.get("error") else 0
