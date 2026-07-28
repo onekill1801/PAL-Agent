@@ -1,11 +1,12 @@
 ---
-topic: "Race Condition (ứng dụng)"
-current_level: "Level 1: Recognition"
-mastery_score: 0.0
+topic: Race Condition (ứng dụng)
+current_level: 'Level 2: Operation'
+mastery_score: 20.0
 prerequisites:
-  - "[[Shared_Mutable_State]]"
-  - "[[Critical_Section]]"
-weaknesses: []
+- '[[Shared_Mutable_State]]'
+- '[[Critical_Section]]'
+weaknesses:
+- 'Câu 4: chưa nêu tính phi tất định → khó reproduce/flaky test'
 strengths: []
 last_evaluated: 2026-07-28
 ---

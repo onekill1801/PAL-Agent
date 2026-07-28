@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "9dd6585a64977797",
+    "type": "split",
+    "children": [
+      {
+        "id": "e43be6bbc35a6bb9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f156cbdea6954460",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d9146d07e3862fd8",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c541582fa4fadc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90d1a5210bb387bc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e66c339f48431e6e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c58a5142f401ba2a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9421458abed47410",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bddc7992cbebb8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "248d40be7460f354",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6d819aabe0ee17de",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "6e2016f1f32964dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b7ac31c578a763fb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "64b8e53757a4d649",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f156cbdea6954460",
+  "lastOpenFiles": [
+    "ai/agents/AI_Agent.md",
+    "ai/agents/AI_Agent.md.tmp.3968681.c357dd019a8d",
+    "ai/agents/Tool_Calling.md",
+    "ai/agents/Tool_Calling.md.tmp.3968681.75e509f8dd8d",
+    "ai/agents/RAG.md",
+    "ai/agents/RAG.md.tmp.3968681.5778c37dadf2",
+    "ai/agents/Prompting.md",
+    "ai/agents/Prompting.md.tmp.3968681.0c2c801a41b1",
+    "ai/agents",
+    "ai/llm/Inference_Parameters.md",
+    "ai/llm/Inference_Parameters.md.tmp.3968681.cb439c1d2ffe",
+    "ai/llm/Transformer_Attention.md",
+    "ai/llm/Transformer_Attention.md.tmp.3968681.4a30466d8bdd",
+    "ai/llm/Token_And_Embedding.md",
+    "ai/llm/Token_And_Embedding.md.tmp.3968681.1710d515299f",
+    "ai/llm/Large_Language_Model.md",
+    "ai/llm/Large_Language_Model.md.tmp.3968681.796122a93fd4",
+    "ai/llm",
+    "ai/foundations/Deep_Learning.md",
+    "ai/foundations/Training_And_Loss.md",
+    "ai/foundations/Neural_Network.md",
+    "ai/foundations/Machine_Learning.md",
+    "ai/foundations/What_Is_AI.md",
+    "Activity_Ledger.md",
+    "Untitled.canvas",
+    "app/Race_Condition.md",
+    "app/Mutex_Lock.md",
+    "app/Critical_Section.md",
+    "app/TOCTOU.md",
+    "app/Shared_Mutable_State.md",
+    "db/Pessimistic_Locking.md",
+    "db/Optimistic_Locking.md",
+    "db/Lost_Update.md",
+    "db/DB_Race_Condition.md"
+  ]
+}
