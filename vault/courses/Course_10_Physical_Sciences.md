@@ -26,6 +26,6 @@ vướng víu, và quantum computing).
 - Robotics (C09): động lực học bay, hóa pin
 - AI/CS (C04): quantum computing ⇄ mô hình tính toán
 
-## Atomic notes (sẽ tạo)
-`Newtonian_Mechanics` · `Electromagnetism` · `Thermodynamics` · `Electrochemistry_Battery` ·
-`Energy_Conversion` · `Quantum_Superposition` · `Quantum_Computing`
+## Atomic notes
+[[Newtonian_Mechanics]] · [[Electromagnetism]] · [[Thermodynamics]] · [[Electrochemistry_Battery]] ·
+[[Energy_Conversion]] · [[Quantum_Superposition]] · [[Quantum_Computing]]

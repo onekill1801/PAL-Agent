@@ -25,7 +25,7 @@ real-time, giao thức (MQTT, BLE, I2C/SPI/UART, LoRa), cảm biến/cơ cấu c
 - Security (C08): IoT thường là bề mặt tấn công yếu (firmware, khoá mặc định)
 - Physics (C10): động lực học bay, khí động, điện-từ cảm biến
 
-## Atomic notes (sẽ tạo)
-`Microcontroller_GPIO` · `RTOS_RealTime` · `IoT_Protocols_MQTT` · `I2C_SPI_UART` ·
-`Sensors_Actuators` · `PID_Control` · `Drone_FlightController` · `IMU_Sensor_Fusion` ·
-`Power_Battery`
+## Atomic notes
+[[Microcontroller_GPIO]] · [[RTOS_RealTime]] · [[IoT_Protocols_MQTT]] · [[I2C_SPI_UART]] ·
+[[Sensors_Actuators]] · [[PID_Control]] · [[Drone_FlightController]] · [[IMU_Sensor_Fusion]] ·
+[[Power_Battery]]
